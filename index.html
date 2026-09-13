@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Gabriela Soares | Data Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .role {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 600px;
+        }
+
+        .links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px dotted var(--accent-color);
+        }
+
+        .links a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-family: monospace;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Maria Gabriela Soares</h1>
+            <div class="role">Data Engineering & Analytics</div>
+            <p class="bio">
+                Focada em arquitetura de dados escalável, construção de Data Lakes e modelagem de dados para suporte à decisão em tempo real.
+            </p>
+            <div class="links">
+                <a href="https://github.com/mariagabrielasoares099-boop" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/maria-gabriela-soares-de-almeida" target="_blank">LinkedIn</a>
+                <a href="mailto:mariagabrielasoares099@gmail.com">E-mail</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Projetos de Engenharia & Dados</h2>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Real-time Stock Market Data Pipeline</span>
+                    <span class="project-tech">Kafka • PySpark • Airflow • PostgreSQL</span>
+                </div>
+                <p class="project-desc">
+                    Pipeline streaming para consumo de dados do mercado financeiro em tempo real, realizando agregação contínua com PySpark e persistência otimizada.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">E-Commerce Data Lakehouse & dbt Modeling</span>
+                    <span class="project-tech">AWS S3 • dbt • BigQuery • SQL</span>
+                </div>
+                <p class="project-desc">
+                    Construção de arquitetura Lakehouse (Medallion) para dados de e-commerce, automatizando transformações com dbt e aplicando testes de qualidade de dados.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">Logistics & Route Optimization Analytics</span>
+                    <span class="project-tech">Python • Power BI • Star Schema</span>
+                </div>
+                <p class="project-desc">
+                    Análise de custos operacionais e tempo de entrega em rotas logísticas com dashboard interativo focado na redução de tempo ocioso da frota.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Stack & Aprendizado Contínuo</h2>
+            <div class="project-item">
+                <p class="project-desc">
+                    <strong>Linguagens & Frameworks:</strong> Python, SQL, PySpark, Bash Scripting.<br>
+                    <strong>Engenharia:</strong> Apache Airflow, Docker, PostgreSQL, dbt, Git.<br>
+                    <strong>Analytics & BI:</strong> Power BI, Modelagem Dimensional, Data Storytelling.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Maria Gabriela Soares • Fortaleza, CE</p>
+        </footer>
+    </div>
+
+</body>
+</html>
