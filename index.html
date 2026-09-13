@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Gabriela Soares | Data Engineer</title>
+    <title>Maria Gabriela Soares | Portfólio</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --purple-accent: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.35);
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
         }
 
         * {
@@ -25,7 +26,7 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .container {
@@ -33,86 +34,205 @@
             margin: 0 auto;
         }
 
+        /* Perfil e Contatos */
         header {
-            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
-        h1 {
-            font-size: 2rem;
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--purple-accent);
+            box-shadow: 0 0 15px var(--purple-glow);
+            flex-shrink: 0;
+        }
+
+        .header-info h1 {
+            font-size: 2.1rem;
             font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 8px;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
         }
 
         .role {
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            margin-bottom: 16px;
+            font-size: 1.05rem;
+            color: var(--purple-accent);
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
-        .bio {
+        .contact-info {
+            font-size: 0.9rem;
             color: var(--text-muted);
-            font-size: 1rem;
-            max-width: 600px;
-        }
-
-        .links {
-            margin-top: 20px;
             display: flex;
-            gap: 15px;
+            flex-direction: column;
+            gap: 4px;
         }
 
-        .links a {
+        .contact-info a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--purple-accent);
+        }
+
+        .social-links {
+            margin-top: 14px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
             color: var(--text-main);
             text-decoration: none;
             font-size: 0.9rem;
-            border-bottom: 1px dotted var(--accent-color);
+            border-bottom: 1px dotted var(--purple-accent);
+            transition: color 0.2s ease;
         }
 
-        .links a:hover {
-            color: var(--accent-color);
+        .social-links a:hover {
+            color: var(--purple-accent);
         }
 
+        /* Seções */
         section {
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         h2 {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--text-muted);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 8px;
         }
 
-        .project-item {
-            margin-bottom: 30px;
+        .about-text {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
         }
 
-        .project-header {
+        .card-item {
+            margin-bottom: 20px;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.2s ease;
+        }
+
+        .card-item:hover {
+            border-color: var(--purple-accent);
+        }
+
+        .card-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .project-title {
+        .card-title {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--text-main);
         }
 
-        .project-tech {
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            font-family: monospace;
+        .card-title a {
+            color: var(--text-main);
+            text-decoration: none;
         }
 
-        .project-desc {
+        .card-title a:hover {
+            color: var(--purple-accent);
+        }
+
+        .card-tech {
+            font-size: 0.85rem;
+            color: var(--purple-accent);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .card-desc {
             color: var(--text-muted);
+            font-size: 0.93rem;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--purple-accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Grid de Certificados com Imagem */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--purple-accent);
+            transform: translateY(-3px);
+        }
+
+        .cert-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #0d1117;
+        }
+
+        .cert-info {
+            padding: 15px;
+        }
+
+        .cert-title {
             font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .cert-issuer {
+            font-size: 0.85rem;
+            color: var(--purple-accent);
+            margin-bottom: 4px;
+        }
+
+        .cert-details {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         footer {
@@ -120,72 +240,96 @@
             font-size: 0.85rem;
             border-top: 1px solid var(--border-color);
             padding-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- Perfil e Cabeçalho -->
         <header>
-            <h1>Maria Gabriela Soares</h1>
-            <div class="role">Data Engineering & Analytics</div>
-            <p class="bio">
-                Focada em arquitetura de dados escalável, construção de Data Lakes e modelagem de dados para suporte à decisão em tempo real.
-            </p>
-            <div class="links">
-                <a href="https://github.com/mariagabrielasoares099-boop" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/maria-gabriela-soares-de-almeida" target="_blank">LinkedIn</a>
-                <a href="mailto:mariagabrielasoares099@gmail.com">E-mail</a>
+            <img src="foto.jpg" alt="Maria Gabriela Soares" class="profile-img">
+            <div class="header-info">
+                <h1>Maria Gabriela Soares</h1>
+                <div class="role">Engenharia & Análise de Dados | DP & BI</div>
+                
+                <div class="contact-info">
+                    <span>📍 Fortaleza - CE</span>
+                    <span>✉️ <a href="mailto:mariagabrielasoares099@gmail.com">mariagabrielasoares099@gmail.com</a></span>
+                    <span>📞 <a href="tel:5585992412811">(85) 99241-2811</a></span>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/maria-gabriela-soares-de-almeida/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/mariagabrielasoares099-boop" target="_blank">GitHub</a>
+                </div>
             </div>
         </header>
 
+        <!-- Sobre Mim -->
         <section>
-            <h2>Projetos de Engenharia & Dados</h2>
+            <h2>Sobre Mim</h2>
+            <p class="about-text">
+                Profissional com experiência corporativa em rotinas de Departamento Pessoal (DP), suporte a sistemas ERP (TOTVS RM) e análise de dados. Atualmente focada em Engenharia e Análise de Dados, aplicando Python, SQL, Power BI e automação de processos para transformar dados operacionais em insights estratégicos para a tomada de decisão.
+            </p>
+        </section>
 
-            <div class="project-item">
-                <div class="project-header">
-                    <span class="project-title">Real-time Stock Market Data Pipeline</span>
-                    <span class="project-tech">Kafka • PySpark • Airflow • PostgreSQL</span>
-                </div>
-                <p class="project-desc">
-                    Pipeline streaming para consumo de dados do mercado financeiro em tempo real, realizando agregação contínua com PySpark e persistência otimizada.
-                </p>
-            </div>
+        <!-- Projetos -->
+        <section>
+            <h2>Projetos em Destaque</h2>
 
-            <div class="project-item">
-                <div class="project-header">
-                    <span class="project-title">E-Commerce Data Lakehouse & dbt Modeling</span>
-                    <span class="project-tech">AWS S3 • dbt • BigQuery • SQL</span>
+            <div class="card-item">
+                <div class="card-header">
+                    <span class="card-title">
+                        <a href="https://github.com/mariagabrielasoares099-boop/people-analytics-turnover" target="_blank">
+                            People Analytics — Painel de Turnover & Absenteísmo
+                        </a>
+                    </span>
+                    <span class="card-tech">Power BI • SQL • Python • DAX</span>
                 </div>
-                <p class="project-desc">
-                    Construção de arquitetura Lakehouse (Medallion) para dados de e-commerce, automatizando transformações com dbt e aplicando testes de qualidade de dados.
+                <p class="card-desc">
+                    Dashboard interativo focado na análise de rotatividade e absenteísmo para otimização de rotinas de DP, identificando concentração de desligamentos e apoiando estratégias de retenção.
                 </p>
-            </div>
-
-            <div class="project-item">
-                <div class="project-header">
-                    <span class="project-title">Logistics & Route Optimization Analytics</span>
-                    <span class="project-tech">Python • Power BI • Star Schema</span>
-                </div>
-                <p class="project-desc">
-                    Análise de custos operacionais e tempo de entrega em rotas logísticas com dashboard interativo focado na redução de tempo ocioso da frota.
-                </p>
+                <a href="https://github.com/mariagabrielasoares099-boop/people-analytics-turnover" target="_blank" class="btn-link">Ver Repositório no GitHub →</a>
             </div>
         </section>
 
+        <!-- Cursos e Certificações com os 2 Certificados Reais -->
         <section>
-            <h2>Stack & Aprendizado Contínuo</h2>
-            <div class="project-item">
-                <p class="project-desc">
-                    <strong>Linguagens & Frameworks:</strong> Python, SQL, PySpark, Bash Scripting.<br>
-                    <strong>Engenharia:</strong> Apache Airflow, Docker, PostgreSQL, dbt, Git.<br>
-                    <strong>Analytics & BI:</strong> Power BI, Modelagem Dimensional, Data Storytelling.
-                </p>
+            <h2>Cursos & Certificações</h2>
+            <div class="certificates-grid">
+                
+                <div class="cert-card">
+                    <img src="power-bi-dsa.jpg" alt="Certificado Microsoft Power BI DSA" class="cert-img">
+                    <div class="cert-info">
+                        <div class="cert-title">Microsoft Power BI Para Business Intelligence e Data Science</div>
+                        <div class="cert-issuer">Data Science Academy</div>
+                        <div class="cert-details">Carga horária: 72h • Concluído em 27/08/2026</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="ia-na-pratica.jpg" alt="Certificado IA na Prática Bradesco" class="cert-img">
+                    <div class="cert-info">
+                        <div class="cert-title">IA Na Prática: Como Dados Bem Estruturados Fazem a Diferença</div>
+                        <div class="cert-issuer">Fundação Bradesco | Microsoft</div>
+                        <div class="cert-details">Carga horária: 2h • Concluído em 27/08/2026</div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <footer>
-            <p>© 2026 Maria Gabriela Soares • Fortaleza, CE</p>
+            <p>© Maria Gabriela Soares • Fortaleza/CE</p>
         </footer>
     </div>
 
